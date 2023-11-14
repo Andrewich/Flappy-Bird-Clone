@@ -1,25 +1,33 @@
 # Flappy Bird Clone
 
-## Build SFML for VC++
+## Build
 
-### Debug
-
-```
-git clone https://github.com/SFML/SFML.git
-cd SFML
-mkdir build
-cd build
-cmake -G"NMake Makefiles" -DCMAKE_BUILD_TYPE=Debug -DSFML_BUILD_NETWORK=0  ..
-nmake
-```
-
-### MinSizeRel
+### Windows
 
 ```
-git clone https://github.com/SFML/SFML.git
-cd SFML
-mkdir build
-cd build
-cmake -G"NMake Makefiles" -DCMAKE_BUILD_TYPE=MinSizeRel -DSFML_BUILD_NETWORK=0  ..
-nmake
+cmake -S . -B build
+cmake --build build --config Debug
 ```
+
+### Linux
+
+```
+sudo apt update
+sudo apt install \
+    libxrandr-dev \
+    libxcursor-dev \
+    libudev-dev \
+    libfreetype-dev \
+    libopenal-dev \
+    libflac-dev \
+    libvorbis-dev \
+    libgl1-mesa-dev \
+    libegl1-mesa-dev
+
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+```
+
+## Links
+
+- https://github.com/SFML/cmake-sfml-project/tree/master
