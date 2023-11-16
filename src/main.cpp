@@ -1,21 +1,8 @@
-#include <SFML/Graphics.hpp>
+#include "GameWindow.h"
 
 int main()
 {
-    auto window = sf::RenderWindow{ { 640u, 480u }, "Flappy Bird" };
-    window.setFramerateLimit(144);
+    flappy_bird::GameWindow window{ 640, 360, "Flappy Bird" };
 
-    while (window.isOpen())
-    {
-        for (auto event = sf::Event{}; window.pollEvent(event);)
-        {
-            if (event.type == sf::Event::Closed)
-            {
-                window.close();
-            }
-        }
-
-        window.clear();
-        window.display();
-    }
+    window.gameLoop();
 }
