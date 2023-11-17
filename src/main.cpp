@@ -26,7 +26,7 @@ int main()
 		game.update();
         
         window.clear();
-		game.draw();
+		game.draw(window);
         window.display();
     }
 }
