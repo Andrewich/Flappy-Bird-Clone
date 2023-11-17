@@ -15,7 +15,7 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 set(SOURCE_EXE src/main.cpp
-               src/GameWindow.cpp)
+               src/Game.cpp)
 
 add_executable(flappy_bird ${SOURCE_EXE})
 target_link_libraries(flappy_bird PRIVATE sfml-graphics
@@ -23,7 +23,7 @@ target_link_libraries(flappy_bird PRIVATE sfml-graphics
 target_compile_features(flappy_bird PRIVATE cxx_std_17)
 
 if(WIN32)
-    #target_link_options(flappy_bird PRIVATE -subsystem:windows)
+    target_link_options(flappy_bird PRIVATE -subsystem:windows)
     add_custom_command(
         TARGET flappy_bird
         COMMENT "Copy OpenAL DLL"
