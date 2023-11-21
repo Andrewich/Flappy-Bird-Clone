@@ -7,7 +7,7 @@ constexpr unsigned int FPS_LIMIT = 30;
 
 int main()
 {
-	sf::RenderWindow window{{640, 480}, "Flappy Bird"};
+	sf::RenderWindow window{{640, 360}, "Flappy Bird"};
 
 	fbc::Game game;
 

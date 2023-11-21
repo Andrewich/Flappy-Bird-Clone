@@ -15,7 +15,9 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 set(SOURCE_EXE src/main.cpp
+               src/Game.h
                src/Game.cpp
+               src/Background.h
 			   src/Background.cpp)
 
 add_executable(flappy_bird ${SOURCE_EXE})

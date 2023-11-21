@@ -19,9 +19,7 @@ public:
 
 private:
 	std::unique_ptr<sf::Texture> m_texture;
-	std::unique_ptr<sf::Sprite> m_sprite;
-
-	sf::Vector2f m_position;
+	std::unique_ptr<sf::Sprite> m_sprite;	
 };
 
 } // namespace fbc
