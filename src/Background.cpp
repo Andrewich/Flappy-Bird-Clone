@@ -1,22 +1,8 @@
 #include "Background.h"
 
-#include <exception>
-
 namespace fbc {
 
-float operator "" _px(long double val) {
-	return (float)val;
-}
-
-Background::Background(const char *filepath) {
-	m_texture = std::make_unique<sf::Texture>();
-	m_sprite = std::make_unique<sf::Sprite>();
-
-	if (!m_texture->loadFromFile(filepath)) {
-		throw std::runtime_error("File not found!");
-	}
-	m_sprite->setTexture(*m_texture);
-}
+Background::Background(const char* filepath) : Sprite{filepath} {}
 
 void Background::update() {
 	if (m_sprite->getPosition().x >= -411._px) {

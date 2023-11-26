@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.20)
 project(FlappyBirdClone LANGUAGES CXX)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -17,8 +17,13 @@ FetchContent_MakeAvailable(SFML)
 set(SOURCE_EXE src/main.cpp
                src/Game.h
                src/Game.cpp
+               src/GameObject.h
+               src/Sprite.h
+               src/Sprite.cpp
                src/Background.h
-			   src/Background.cpp)
+			   src/Background.cpp
+               src/Ground.h
+               src/Ground.cpp)
 
 add_executable(flappy_bird ${SOURCE_EXE})
 target_link_libraries(flappy_bird PRIVATE sfml-graphics

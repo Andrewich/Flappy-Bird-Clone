@@ -1,9 +1,10 @@
 #ifndef GAME_H_
 #define GAME_H_
 
-#include "Background.h"
+#include "GameObject.h"
 
 #include <memory>
+#include <vector>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
@@ -14,8 +15,8 @@ public:
 	Game();
 	void update();
 	void draw(sf::RenderWindow &window);
-private:
-	std::unique_ptr<Background> m_background;
+private:	
+	std::vector< std::unique_ptr< GameObject<sf::RenderWindow> >> m_gameObjects;
 };
 
 }; // namespace fbc
