@@ -8,6 +8,7 @@ class GameObject {
 public:	
 	virtual void update() = 0;
 	virtual void draw(T& window) = 0;
+	virtual ~GameObject() = default;
 };
 
 } // namespace fbc

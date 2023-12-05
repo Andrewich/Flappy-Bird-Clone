@@ -3,11 +3,11 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Event.hpp>
 
-constexpr unsigned int FPS_LIMIT = 30;
+constexpr unsigned int FPS_LIMIT = 60;
 
 int main()
 {
-	sf::RenderWindow window{{640, 360}, "Flappy Bird"};
+	sf::RenderWindow window{{640, 360}, "Flappy Bird Clone"};
 
 	fbc::Game game;
 
