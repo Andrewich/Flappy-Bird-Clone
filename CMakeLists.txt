@@ -25,7 +25,9 @@ set(SOURCE_EXE src/main.cpp
                src/Ground.h
                src/Ground.cpp
                src/Bird.h
-               src/Bird.cpp)
+               src/Bird.cpp
+               src/Pipes.h
+               src/Pipes.cpp)
 
 add_executable(flappy_bird ${SOURCE_EXE})
 target_link_libraries(flappy_bird PRIVATE sfml-graphics
